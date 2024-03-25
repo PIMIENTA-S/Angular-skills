@@ -1,5 +1,5 @@
 
-const personajes : string[] = ['vida', 'ataque', 'movimiento']
+const [] : string[] = ['vida', 'ataque', 'movimiento']
 
 interface pokemon {
     name : string;
@@ -14,7 +14,24 @@ const charizard : pokemon = {
     name : "charizard",
     vida : 1200,
     daño : 500
-} 
+}
+
+
+function atacado(pokemon: pokemon, damage: number):{}{
+
+    const {vida} = pokemon;
+
+    let newVida = vida - damage
+
+    pokemon.vida = newVida
+
+    return pokemon
+    
+}
+
+const result = atacado(charizard, 560)
+
+console.log(result)
 
 charizard.movimiento="volar";
 

@@ -5,12 +5,12 @@ import './style.css'
 // import './topics/03-basic-funtions.ts'
 // import './topics/04-homework-types.ts'
 // import './topics/05-basic-destructuring.ts'
-import './topics/06-funtion-destructuring.ts'
+// import './topics/06-funtion-destructuring.ts'
 // import './topics/07-import-export.ts'
+// import './topics/08-basic-class.ts'
 
-
-import './topics/08-basic-class.ts'
-
+// import './topics/09-basic.generics.ts'
+import './topics/11-opcional-chainig.ts'
 
 import { setupCounter } from './counter.ts'
 

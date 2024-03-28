@@ -5,6 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
+// Todo se maneja por clases
 export class AppComponent {
-  title = 'bases';
+  public title: string = 'Angular aplications';
+  public author: string = "PIMIENTA'S"
 }

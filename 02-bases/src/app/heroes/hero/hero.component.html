@@ -1,1 +1,23 @@
-<p>hero works!</p>
+
+
+<h1> {{name}} </h1>
+
+<dl>
+    <dt>Nombre:</dt>
+    <dd>{{name}}</dd>
+
+    <dt>Edad:</dt>
+    <dd>{{age}}</dd>
+
+    <!-- los metodos se llaman con sus parantesis -->
+    <dt>Metodo:</dt>
+    <dd>{{ getDescriptionHero() }}</dd>
+
+    <!-- los atributos solo se especifican -->
+    <dt>Capitalizado:</dt>
+    <dd>{{ capitalizado }}</dd>
+</dl>
+
+<button class="btn btn-primary mx-2" (click)="changeHero()">Cambiar nombre</button>
+
+<button class="btn btn-primary" (click)="changeAge()">Cambiar edad</button>

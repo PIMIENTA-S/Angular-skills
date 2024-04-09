@@ -33,4 +33,9 @@ export class HeroComponent {
 
   }
 
+  reset():void {
+    this.name = 'Ironman';
+    this.age = 45;
+  }
+
 }

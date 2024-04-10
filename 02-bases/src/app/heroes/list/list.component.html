@@ -1,1 +1,32 @@
-<p>list works!</p>
+<h3>Lista de heroes</h3>
+
+<!-- Forma tradicional -->
+
+<!-- <ul class="mt-2 list-group">
+    <li class="list-group-item">Spiderman</li>
+    <li class="list-group-item">Thor</li>
+    <li class="list-group-item">Hulk</li>
+    <li class="list-group-item">Ojo de Halcon</li>
+    <li class="list-group-item">Ironman</li>
+</ul> -->
+
+<div *ngIf="deleteHero; else h3delete">
+
+    <h3>El ultimo heroe borrado ha sido <small class="text-danger"> {{ deleteHero }} </small></h3>
+
+</div>
+
+<ng-template #h3delete>
+    <h3> No ha borrado nada </h3>
+</ng-template>
+
+
+<button *ngIf="heroNames.length > 0" (click)="heroRemove()" class="btn btn-outline-danger"> Borrar Heroe </button>
+
+
+<ul class="mt-2 list-group">
+    <li *ngFor="let item of heroNames" class="list-group-item">
+        {{ item }}
+        <!-- interpolacion -->
+    </li>
+</ul>

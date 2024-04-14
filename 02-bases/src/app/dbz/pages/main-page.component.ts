@@ -1,5 +1,6 @@
-import { characters } from './../interfaces/characters.interface';
 import { Component } from '@angular/core';
+
+import { Characters } from './../interfaces/characters.interface';
 
 
 
@@ -9,7 +10,7 @@ import { Component } from '@angular/core';
 })
 
 export class mainPageComponent {
-    public charactersDBZ: characters[] = [{
+    public charactersDBZ: Characters[] = [{
         name: 'Trunks',
         power: 8000
     },{
@@ -19,4 +20,11 @@ export class mainPageComponent {
         name: 'Vegeta',
         power: 9500
     }]
+
+    newCharacter( charaterNew: Characters ):void {
+        console.log(charaterNew)
+        this.charactersDBZ.push(charaterNew)
+
+        // console.log(this.charactersDBZ);
+    }
 }

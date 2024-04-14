@@ -1,5 +1,7 @@
 import { Component, Input } from '@angular/core';
-import { characters } from '../../interfaces/characters.interface';
+
+import { Characters } from './../../interfaces/characters.interface';
+
 
 @Component({
   selector: 'dbz-list',
@@ -10,10 +12,14 @@ export class ListComponent {
 
   @Input()
 
-  public charactersList: characters[] = [{
+  public charactersList: Characters[] = [{
     name: 'Picoro',
     power: 7000
   }]
+  
+  // hola(){
+  //   console.log(this.charactersList)
 
-
+  // }
 }
+// debugger;

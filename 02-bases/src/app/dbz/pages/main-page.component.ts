@@ -29,8 +29,7 @@ export class mainPageComponent {
     };
 
     onDeleteCharacter(index:number){
-        console.log("main page")
-        console.log(index)
+        this.charactersDBZ.splice(index, 1)
 
     }
 }

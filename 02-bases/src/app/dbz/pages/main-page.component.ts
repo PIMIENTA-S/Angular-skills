@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Characters } from './../interfaces/characters.interface';
 
@@ -26,5 +26,11 @@ export class mainPageComponent {
         this.charactersDBZ.push(charaterNew)
 
         // console.log(this.charactersDBZ);
+    };
+
+    onDeleteCharacter(index:number){
+        console.log("main page")
+        console.log(index)
+
     }
 }

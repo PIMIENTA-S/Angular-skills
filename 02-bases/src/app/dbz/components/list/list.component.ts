@@ -15,14 +15,13 @@ export class ListComponent {
     name: 'Picoro',
     power: 7000
   }];
+  
   @Output()
-  public onDelete: EventEmitter<number> = new EventEmitter();
+  public onDelete: EventEmitter<string> = new EventEmitter();
 
 
-  onDeleteCharacter(index: number):void{
-    let i = index
-    console.log(index)
-    this.onDelete.emit(i)
+  onDeleteCharacter(id: string):void{
+    this.onDelete.emit(id)
   };
   
   // hola(){

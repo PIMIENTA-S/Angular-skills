@@ -2,6 +2,7 @@
 
 
 export interface Characters{
-    name: string;
+    id?   : string;
+    name : string;
     power: number;
 }

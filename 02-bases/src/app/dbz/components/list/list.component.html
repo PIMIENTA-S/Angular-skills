@@ -2,16 +2,19 @@
     
 <ul class="list-group">
     <li 
-    *ngFor="let item of charactersList
-    let i = index"
+    *ngFor="let item of charactersList;
+    let i = index;
+    "
+
     class="list-group-item d-flex justify-content-between align-items-center"
     [ngClass]="{'list-group-item-secondary': i}">
         <div>
+            
             <span class="text-primary"> {{i + 1}}. </span>
-            <span> {{ item.name }} - power {{ item.power }} </span>
+            <span> {{ item.name }} - power {{ item.power }} {{item.id}} </span>
         </div>
 
-        <button class="btn btn-danger" (click)="onDeleteCharacter(i)" > x </button>
+        <button class="btn btn-danger" (click)="onDeleteCharacter('jj')" > x </button>
 
     </li>
 </ul>

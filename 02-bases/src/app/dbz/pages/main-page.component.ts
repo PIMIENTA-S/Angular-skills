@@ -12,7 +12,20 @@ import { Characters } from './../interfaces/characters.interface';
 
 export class mainPageComponent {
     
-    constructor( public dbzService:DbzService ){
-
+    constructor( private dbzService:DbzService ){
     }
+
+    get charactersDBZ(): Characters[] {
+        return this.dbzService.charactersDBZ
+    }
+
+    deleteCharacterById(id : string): void {
+        this.dbzService.deleteCharacterById( id )
+    }
+
+    addCharacter( character: Characters ): void {
+        this.dbzService.addCharacter( character )
+    }
+
+
 }

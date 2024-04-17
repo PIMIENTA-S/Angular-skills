@@ -19,14 +19,15 @@ export class ListComponent {
   @Output()
   public onDelete: EventEmitter<string> = new EventEmitter();
 
-
-  onDeleteCharacter(id: string):void{
+  // Mi solucion
+  // onDeleteCharacter(id: string | undefined):void{
+  //   this.onDelete.emit(id)
+  // };
+  
+  onDeleteCharacter(id?: string):void{
+    if (!id) return;
     this.onDelete.emit(id)
   };
   
-  // hola(){
-  //   console.log(this.charactersList)
-
-  // }
 }
 // debugger;

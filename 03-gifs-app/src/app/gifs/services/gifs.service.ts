@@ -11,7 +11,12 @@ export class GifsService {
     private api_key : string = 'vacJu6iaVCJDQTiup44maLYMsXJEU6pM';
     private urlApi  : string = 'https://api.giphy.com/v1/gifs/';
     
-    constructor( private http: HttpClient ) { }
+    constructor( private http: HttpClient ) { 
+        this.loadLocalStore();
+        
+        // this.searchTag(this._SearchHistory[0])
+
+    }
 
     get tagHistory(){
         return [...this._SearchHistory]
@@ -33,7 +38,25 @@ export class GifsService {
         const array = new Set (list.splice(0,10));
         this._SearchHistory = [...array]
 
+        this.saveLocalStore()
 
+
+
+    }
+
+    // Serealizacion
+
+    // El metodo stringify se usa para mandar las objetos, arrays y demas concatenados entre strings
+    private saveLocalStore(): void{
+        localStorage.setItem('history', JSON.stringify( this._SearchHistory ) )
+    }
+
+    private loadLocalStore(): void{
+        if( localStorage.getItem('history') ) return;
+
+        this._SearchHistory = JSON.parse(localStorage.getItem('history')!)
+        // if ()
+        // this.searchTag(this._SearchHistory[0])
 
     }
 

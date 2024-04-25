@@ -4,7 +4,7 @@
     <hr class="text-white">
 
     <div class="list-group list-reset">
-        <button *ngFor="let item of showHistory" class="list-group-item list-group-item-action">
+        <button *ngFor="let item of showHistory" class="list-group-item list-group-item-action" (click)="searchAgain(item)">
              {{ item | titlecase }} 
         </button>
     </div>

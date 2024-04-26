@@ -13,8 +13,6 @@ export class GifsService {
     
     constructor( private http: HttpClient ) { 
         this.loadLocalStore();
-        
-        // this.searchTag(this._SearchHistory[0])
 
     }
 
@@ -24,24 +22,10 @@ export class GifsService {
 
     orderTag( list: string[] ){
 
-        // tag = tag.toLowerCase()
-
-        // for (let i = 0; i <= this._SearchHistory.length; i ++ ){
-
-        //     if (this._SearchHistory[i] === tag){
-        //         delete this._SearchHistory[i]
-
-        //     }
-
-        // }
-
         const array = new Set (list.splice(0,10));
         this._SearchHistory = [...array]
 
         this.saveLocalStore()
-
-
-
     }
 
     // Serealizacion
@@ -54,7 +38,10 @@ export class GifsService {
     private loadLocalStore(): void{
         if( localStorage.getItem('history') ) return;
 
+        if(this._SearchHistory.length ===0) return;
+
         this._SearchHistory = JSON.parse(localStorage.getItem('history')!)
+        
         // if ()
         // this.searchTag(this._SearchHistory[0])
 

@@ -36,14 +36,14 @@ export class GifsService {
     }
 
     private loadLocalStore(): void{
-        if( localStorage.getItem('history') ) return;
-
-        if(this._SearchHistory.length ===0) return;
-
+        if( !localStorage.getItem('history') ) return;
+        
         this._SearchHistory = JSON.parse(localStorage.getItem('history')!)
+
+        if( this._SearchHistory.length === 0 ) return;
+        this.searchTag(this._SearchHistory[0])
         
         // if ()
-        // this.searchTag(this._SearchHistory[0])
 
     }
 

@@ -2,11 +2,17 @@
 
 <div class="card mb-2 text-center bg-dark">
     <!-- heard for the card -->
-    <img 
+
+
+    <shared-lazy-image [alt]="receiveGifs.title" [url]="receiveGifs.images.downsized_medium.url || '' " ></shared-lazy-image>
+
+
+    
+    <!-- <img 
         [src]="receiveGifs.images.downsized_medium.url" 
         [alt]="receiveGifs.title"
         class="card-img-top"
-    >
+    > -->
 
     <div class="card-body text-white">
         <p class="card-text">

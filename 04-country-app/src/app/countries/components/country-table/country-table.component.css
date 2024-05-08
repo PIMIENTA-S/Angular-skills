@@ -1,0 +1,52 @@
+
+table {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    border-spacing: 0;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px auto;
+}
+
+/* adds border */
+th, td {
+    border: solid 1px #ccc;
+    padding: 5px;
+}
+
+/* add styles for header */
+thead {
+    background-color: black;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+/* update tr for change color */
+
+tr:nth-child(even) {
+    background-color: #eee;
+}
+
+/* reduce size for img */
+img {
+    width: 25px;
+}
+
+/* to aling text for information  */
+td {
+    text-align: center;
+}
+
+tbody tr{
+    transition: 0.3s ease;
+}
+
+/* to change color for hover */
+
+tbody tr:hover{
+    background-color: rgb(160, 222, 225);
+    transform: scale(1.1)
+}
+
+/* tbody tr */

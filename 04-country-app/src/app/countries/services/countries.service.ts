@@ -17,6 +17,17 @@ export class CountryService {
 
     }
 
+    searchByCode( code: string ): Observable<Country[]>{
+
+        const url = `${ this.apiUrl }alpha/${ code }`
+
+        return this.http.get<Country[]>( url )
+            .pipe( catchError( () => of([]))
+        );
+
+    }
+
+
     capitalSearch( term: string ): Observable<Country[]>{
 
         const url = `${ this.apiUrl }capital/${ term }`
